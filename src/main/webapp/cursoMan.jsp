@@ -9,7 +9,7 @@
 <%@ page import="com.tecsup.lab05.services.CursoService" %>
 <%@ page import="com.tecsup.lab05.services.Impl.CursoServiceImpl" %>
 <%@ page import="com.tecsup.lab05.model.entities.Curso" %>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <%
@@ -34,8 +34,11 @@
 
         <h1>Mantenimiento de Cursos!</h1>
         <div style="padding: 10px;">
-            <button class="btn btn-danger"><a class="nav-link  link-light" aria-current="page"
-                                              href="cursoInsertar.jsp"> Nuevo Curso</a></button>
+            <button class="btn btn-danger">
+                <a class="nav-link  link-light" aria-current="page" href="cursoInsertar.jsp">
+                    Nuevo Curso
+                </a>
+            </button>
         </div>
 
         <table  class="table table-dark table-hover">
@@ -53,7 +56,8 @@
                 <td><a class="btn btn-warning" href="cursoEliminar.jsp?id=<%=curso.getCodigo() %>">
                     <i class="fa-solid fa-trash"></i>Borrar</a>
                     <a class="btn btn-danger" href="cursoActualizar.jsp?id=<%=curso.getCodigo() %>">
-                        <i class="fa-solid fa-pencil"></i>Actualizar</a></td>
+                        <i class="fa-solid fa-pencil"></i>Actualizar</a>
+                </td>
             </tr>
             <% } %>
         </table>

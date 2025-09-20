@@ -43,11 +43,6 @@ public class CursoServiceImpl implements CursoService {
 
     @Override
     public List<Curso> filterByCreditos(int min, int max) {
-        return null;
+        return  dao.findByRangeCreditos(min, max);
     }
-
-    //@Override
-    //public List<Curso> filterByCreditos(int min, int max ){
-        //return dao.findbyRangeCreditos(min, max);
-    //}
 }

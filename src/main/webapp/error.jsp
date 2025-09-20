@@ -12,5 +12,8 @@
 </head>
 <body>
 
+<h1>:::::::::::::::Sistema Intranet::::::::::::::::</h1>
+<h1>::::::::::::::::::::::Error de credenciales::::::::::::::::::::::::</h1>
+
 </body>
 </html>
