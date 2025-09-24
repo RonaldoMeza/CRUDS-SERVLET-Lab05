@@ -74,16 +74,20 @@ public class MatriculaDaoCallableStatement implements MatriculaDao {
 
     @Override
     public void update(Matricula matricula) {
-        String sql = "{call sp_upd_matricula_estado(?,?)}";
+        String sql = "{call sp_upd_matricula(?, ?, ?, ?)}";
         try (Connection con = DBConn.getConnection();
              CallableStatement cst = con.prepareCall(sql)) {
             cst.setInt(1, matricula.getIdMatricula());
-            cst.setString(2, matricula.getEstado());
+            cst.setString(2, matricula.getChrAluCodigo());
+            cst.setInt(3, matricula.getIdPeriodo());
+            cst.setString(4, matricula.getEstado());
             cst.executeUpdate();
         } catch (SQLException e) {
             System.out.println("Error en update Matricula: " + e.getMessage());
+            // opcional: e.printStackTrace();
         }
     }
+
 
     @Override
     public void delete(Integer id) {

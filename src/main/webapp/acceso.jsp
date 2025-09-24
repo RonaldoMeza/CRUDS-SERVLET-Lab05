@@ -14,15 +14,13 @@
 <html>
 <head>
     <title>Login Page</title>
-    <!--Bootsrap 4 CDN-->
+    <!--Bootstrap 4 CDN-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-
     <!--Fontawesome CDN-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
 
     <!--Custom styles-->
-    <link rel="stylesheet" type="text/css" href="css/estilos.css">
-
+    <link rel="stylesheet" type="text/css" href="css/acceso.css">
 </head>
 <body>
 <div class="container">

@@ -59,4 +59,15 @@ public class DaoFactory {
         }
     }
 
+    // ALUMNO
+    public static AlumnoDao getAlumnoDao(Tipo tipo){
+        switch (tipo){
+            case CST:
+                return new AlumnoDaoCallableStatement();
+            default:
+                return null;
+        }
+    }
+
+
 }

@@ -1,0 +1,269 @@
+:root {
+    --primary-dark: #113747;
+    --primary-medium: #1A718D;
+    --primary-light: #2984D1;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --border-gray: #e9ecef;
+    --text-dark: #2c3e50;
+    --success-green: #28a745;
+    --warning-orange: #fd7e14;
+    --danger-red: #dc3545;
+    --shadow: 0 4px 6px rgba(17, 55, 71, 0.1);
+    --shadow-hover: 0 8px 15px rgba(17, 55, 71, 0.15);
+}
+
+body {
+    background: linear-gradient(135deg, var(--light-gray) 0%, #ffffff 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+.main-container {
+    margin-top: 80px;
+    max-width: 800px;
+}
+
+.form-card {
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    border: none;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.form-card:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.card-header-custom {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-medium) 100%);
+    color: var(--white);
+    padding: 2rem;
+    border-bottom: none;
+}
+
+.card-header-custom h3 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.card-header-custom .icon {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.form-body {
+    padding: 2.5rem;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--primary-dark);
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.form-control, .form-select {
+    border: 2px solid var(--border-gray);
+    border-radius: 12px;
+    padding: 0.875rem 1.25rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: var(--white);
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 0.2rem rgba(41, 132, 209, 0.15);
+    outline: none;
+}
+
+.form-control:hover, .form-select:hover {
+    border-color: var(--primary-medium);
+}
+
+.form-control[type="date"] {
+    position: relative;
+}
+
+.form-control[type="date"]::-webkit-calendar-picker-indicator {
+    background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIGZpbGw9IiMxQTcxOEQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTcgMTFoMnYySDd6bTAtNGgydjJIN3ptNC00aDJ2Mmgtdi0yem00IDRoMnYyaC0yem0tNCA0aDJ2MmgtMnptNCAwaDJ2MmgtMnptLTQgNGgydjJoLTJ6bTQgMGgydjJoLTJ6bTQtOGgydjJoLTJ6bTAtNGgydjJoLTJ6bTAgOGgydjJoLTJ6bTAgNGgydjJoLTJ6Ii8+CjxwYXRoIGQ9Ik01IDRoMTRhMSAxIDAgMCAxIDEgMXYxNGExIDEgMCAwIDEtMSAxSDVhMSAxIDAgMCAxLTEtMVY1YTEgMSAwIDAgMSAxLTF6Ii8+Cjwvc3ZnPgo=") no-repeat center center;
+    background-size: 20px;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.status-select {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgZmlsbD0iIzFBNzE4RCIgdmlld0JveD0iMCAwIDEyIDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik02IDhsLTYtNiAxLjQxLTEuNDFMNiAzLjE3bDQuNTktNC41OEwxMiAyeiIvPgo8L3N2Zz4K");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 12px;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+}
+
+.status-abierto { background: var(--success-green); color: white; }
+.status-cerrado { background: var(--warning-orange); color: white; }
+.status-inactivo { background: var(--danger-red); color: white; }
+
+.btn-custom-primary {
+    background: linear-gradient(135deg, var(--primary-medium) 0%, var(--primary-light) 100%);
+    border: none;
+    color: var(--white);
+    padding: 0.875rem 2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(17, 55, 71, 0.2);
+}
+
+.btn-custom-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(17, 55, 71, 0.3);
+    color: var(--white);
+}
+
+.btn-custom-secondary {
+    background: var(--white);
+    border: 2px solid var(--primary-dark);
+    color: var(--primary-dark);
+    padding: 0.875rem 2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-custom-secondary:hover {
+    background: var(--primary-dark);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-gray);
+}
+
+.info-badge {
+    background: rgba(41, 132, 209, 0.1);
+    color: var(--primary-dark);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    border-left: 4px solid var(--primary-light);
+}
+
+.form-helper-text {
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin-top: 0.25rem;
+}
+
+.date-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        margin-top: 20px;
+        padding: 0 1rem;
+    }
+
+    .form-body {
+        padding: 1.5rem;
+    }
+
+    .card-header-custom {
+        padding: 1.5rem;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .btn-custom-primary,
+    .btn-custom-secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .date-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.input-group-custom {
+    position: relative;
+}
+
+.input-group-custom .form-control {
+    padding-left: 3rem;
+}
+
+.input-group-custom .input-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-medium);
+    z-index: 5;
+}
+
+.form-validation {
+    border-color: var(--danger-red) !important;
+}
+
+.validation-message {
+    color: var(--danger-red);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: none;
+}

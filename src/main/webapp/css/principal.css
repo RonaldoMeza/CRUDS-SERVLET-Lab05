@@ -1,0 +1,355 @@
+:root {
+    --primary-dark: #113747;
+    --primary-medium: #1A718D;
+    --primary-light: #2984D1;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --border-gray: #e9ecef;
+    --text-dark: #2c3e50;
+    --success-color: #28a745;
+    --warning-color: #fd7e14;
+    --info-color: #17a2b8;
+    --shadow: 0 4px 6px rgba(17, 55, 71, 0.1);
+    --shadow-hover: 0 8px 25px rgba(17, 55, 71, 0.15);
+    --gradient-primary: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-medium) 100%);
+    --gradient-card: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
+}
+
+body {
+    background: linear-gradient(135deg, var(--light-gray) 0%, #e3f2fd 50%, #ffffff 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+.main-container {
+    margin-top: 50px;
+    padding: 0 1rem;
+}
+
+/* Header de bienvenida */
+.welcome-header {
+    background: var(--gradient-primary);
+    color: var(--white);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.welcome-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(50px, -50px);
+}
+
+.welcome-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    transform: translate(-30px, 30px);
+}
+
+.welcome-content {
+    position: relative;
+    z-index: 2;
+}
+
+.welcome-header h4 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.welcome-header .text-muted {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 1.1rem;
+}
+
+.quick-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.btn-header {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.btn-header:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.btn-header.btn-logout {
+    background: rgba(220, 53, 69, 0.2);
+    border-color: rgba(220, 53, 69, 0.3);
+}
+
+.btn-header.btn-logout:hover {
+    background: rgba(220, 53, 69, 0.3);
+}
+
+/* Cards de navegación */
+.nav-card {
+    background: var(--gradient-card);
+    border: none;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+
+.nav-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--primary-light), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.nav-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+.nav-card:hover::before {
+    transform: translateX(100%);
+}
+
+.card-icon-wrapper {
+    width: 70px;
+    height: 70px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-icon-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    opacity: 0.1;
+    border-radius: inherit;
+}
+
+.icon-cursos {
+    background: linear-gradient(135deg, var(--primary-light), #4fc3f7);
+    color: var(--white);
+}
+
+.icon-matriculas {
+    background: linear-gradient(135deg, var(--success-color), #66bb6a);
+    color: var(--white);
+}
+
+.icon-periodos {
+    background: linear-gradient(135deg, var(--warning-color), #ffb74d);
+    color: var(--white);
+}
+
+.card-title {
+    color: var(--primary-dark);
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    color: #6c757d;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.btn-card {
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-card::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s ease;
+}
+
+.btn-card:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-primary-custom {
+    background: linear-gradient(135deg, var(--primary-light), #4fc3f7);
+    color: var(--white);
+}
+
+.btn-primary-custom:hover {
+    background: linear-gradient(135deg, #4fc3f7, var(--primary-light));
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.btn-success-custom {
+    background: linear-gradient(135deg, var(--success-color), #66bb6a);
+    color: var(--white);
+}
+
+.btn-success-custom:hover {
+    background: linear-gradient(135deg, #66bb6a, var(--success-color));
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.btn-warning-custom {
+    background: linear-gradient(135deg, var(--warning-color), #ffb74d);
+    color: var(--white);
+}
+
+.btn-warning-custom:hover {
+    background: linear-gradient(135deg, #ffb74d, var(--warning-color));
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* Sección de ayuda */
+.help-section {
+    background: linear-gradient(135deg, rgba(41, 132, 209, 0.05), rgba(26, 113, 141, 0.05));
+    border: 1px solid rgba(41, 132, 209, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 2.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.help-section::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--primary-light);
+}
+
+.help-icon {
+    color: var(--primary-light);
+    margin-right: 0.75rem;
+    font-size: 1.2rem;
+}
+
+.help-text {
+    margin: 0;
+    color: var(--primary-dark);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Animaciones */
+.fade-in {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.fade-in-delay-1 { animation-delay: 0.1s; }
+.fade-in-delay-2 { animation-delay: 0.2s; }
+.fade-in-delay-3 { animation-delay: 0.3s; }
+.fade-in-delay-4 { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-container {
+        margin-top: 20px;
+        padding: 0 0.5rem;
+    }
+
+    .welcome-header {
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .welcome-header h4 {
+        font-size: 1.5rem;
+    }
+
+    .quick-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .btn-header {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .card-icon-wrapper {
+        width: 60px;
+        height: 60px;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .welcome-header h4 {
+        font-size: 1.3rem;
+    }
+
+    .help-section {
+        padding: 1rem;
+    }
+}
